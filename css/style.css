@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #EEEEEE;
+  color: #333;
+}
+
+#content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#header {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #ccc;
+}
+#header h2 {
+  margin: 0;
+}
+#header h2 span {
+  color: #2ECC71;
+  font-size: 28px;
+}
+#header #info #activeTasks {
+  position: relative;
+  padding-left: 12px;
+}
+#header #info #activeTasks::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin-right: 3px;
+}
+#header #info #completedTasks {
+  position: relative;
+  margin-left: 5px;
+  padding-left: 24px;
+}
+#header #info #completedTasks::before {
+  content: url("https://img.icons8.com/color/20/000000/checkmark.png");
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  margin-right: 4px;
+}
+
+#form {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #ccc;
+}
+#form input {
+  padding: 7px;
+  background-color: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+#form #textField {
+  flex: 1;
+  margin-right: 10px;
+}
+#form #addButton {
+  padding: 7px 15px;
+  color: #fff;
+  background-color: #2ECC71;
+  border-color: #00B16A;
+  transition: 0.1s;
+}
+#form #addButton:hover {
+  background-color: #00B16A;
+  border-color: #2EA26C;
+}
+
+#list {
+  box-shadow: 2px 2px 5px #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+#list .list-item {
+  margin-bottom: 0px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+#list .list-item:last-child {
+  border-bottom: none;
+}
+#list .list-item.completed {
+  position: relative;
+  color: #fff;
+  background-color: #2ECC71;
+}
+#list .list-item.active .deleteButton {
+  opacity: 1;
+  visibility: visible;
+}
+#list .list-item.active .editButton {
+  opacity: 1;
+  visibility: visible;
+}
+#list .list-item .desc-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#list .list-item .editButton {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+#list .list-item .editButton img {
+  margin-left: 15px;
+  display: block;
+  width: 25px;
+}
+#list .list-item .deleteButton {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+}
+#list .list-item .deleteButton img {
+  display: block;
+  width: 30px;
+}

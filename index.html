@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Manrope:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <title>TODO list</title>
+</head>
+<body>
+  <div id="content">
+    <div id="header">
+      <h2><span>TODO</span> list</h2>
+      <div id="info">
+        <span id="activeTasks">3</span>
+        <span id="completedTasks">0</span>
+      </div>
+    </div>
+    <form action="#" id="form">
+      <input type="text" name="textField" id="textField" placeholder="type something...">
+      <input type="submit" value="add" id="addButton">
+    </form>
+    <div id="list">
+      <div class="list-item">
+        <div class="desc-holder">
+          <span class="desc">some text...</span>
+          <div class="editButton">
+            <img src="img/edit-icon.png" alt="icon">
+          </div>
+        </div>
+        <div class="deleteButton">
+          <img src="img/delete-icon.png" alt="icon"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

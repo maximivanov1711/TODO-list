@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #EEEEEE;
+  color: #333;
+}
+
+#content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#header {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #ccc;
+
+  h2 {
+    margin: 0;
+
+    span {
+      color: #2ECC71;
+      font-size: 28px;
+    }
+  }
+
+  #info {
+    #activeTasks {
+      position: relative;
+      padding-left: 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+        background-color: #ccc;
+        margin-right: 3px;
+      }
+    }
+
+    #completedTasks {
+      position: relative;
+      margin-left: 5px;
+      padding-left: 24px;
+
+      &::before {
+        content: url("https://img.icons8.com/color/20/000000/checkmark.png");
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+#form {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #ccc;
+
+  input {
+    padding: 7px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
+
+  #textField {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  #addButton {
+    padding: 7px 15px;
+    color: #fff;
+    background-color: #2ECC71;
+    border-color: #00B16A;
+    transition: .1s;
+
+    &:hover {
+      background-color: #00B16A;
+      border-color: #2EA26C;
+    }
+  }
+}
+
+#list {
+  box-shadow: 2px 2px 5px #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+
+  .list-item {
+    margin-bottom: 0px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.completed {
+      position: relative;
+      color: #fff;
+      background-color: #2ECC71;
+    }
+
+    &.active {
+      .deleteButton {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .editButton {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .desc-holder {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .editButton {
+      opacity: 0;
+      visibility: hidden;
+      transition: .1s;
+
+      img {
+        margin-left: 15px;
+        display: block;
+        width: 25px;
+      }
+    }
+
+    .deleteButton {
+      opacity: 0;
+      visibility: hidden;
+      transition: .1s;
+
+      img {
+        display: block;
+        width: 30px;
+      }
+    }
+  }
+}
