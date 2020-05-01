@@ -126,6 +126,7 @@ body {
       position: relative;
       color: #fff;
       background-color: #2ECC71;
+      border-color: #2EA26C;
     }
 
     &.edit {
@@ -165,7 +166,6 @@ body {
 
     .desc {
       margin: 0;
-      display: inline-block;
       max-width: 300px;
     }
 

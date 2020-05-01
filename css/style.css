@@ -112,6 +112,7 @@ body {
   position: relative;
   color: #fff;
   background-color: #2ECC71;
+  border-color: #2EA26C;
 }
 #list .list-item.edit #edit-form {
   display: flex;
@@ -140,7 +141,6 @@ body {
 }
 #list .list-item .desc {
   margin: 0;
-  display: inline-block;
   max-width: 300px;
 }
 #list .list-item #edit-form {
