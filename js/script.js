@@ -20,7 +20,11 @@ function addItem(desc) {
   const item = `
   <div class="list-item">
     <div class="desc-holder">
-      <span class="desc">${desc}</span>
+      <span class="desc">some text...</span>
+      <form action="#" id="edit-form">
+        <input type="text" name="editField" id="editField">
+        <input type="submit" value="edit" id="editButton">
+      </form>
       <div class="editButton">
         <img src="img/edit-icon.png" alt="icon">
       </div>

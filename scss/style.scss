@@ -107,6 +107,7 @@ body {
   box-shadow: 2px 2px 5px #ccc;
   border-radius: 3px;
   background-color: #fff;
+  overflow: hidden;
 
   .list-item {
     margin-bottom: 0px;
@@ -133,6 +134,7 @@ body {
       }
 
       .editButton {
+        transition: 0s;
         opacity: 0 !important;
         visibility: hidden !important;
       }
