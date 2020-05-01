@@ -116,17 +116,22 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
     transition: .1s;
 
+    &:first-child {
+      border: none;
+    }
+
     &:last-child {
-      border-bottom: none;
+      border: none;
     }
 
     &.completed {
       position: relative;
       color: #fff;
       background-color: #2ECC71;
-      border-color: #2EA26C;
+      border-color: #35b378;
     }
 
     &.edit {

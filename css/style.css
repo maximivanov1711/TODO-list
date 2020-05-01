@@ -103,16 +103,20 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   transition: 0.1s;
 }
+#list .list-item:first-child {
+  border: none;
+}
 #list .list-item:last-child {
-  border-bottom: none;
+  border: none;
 }
 #list .list-item.completed {
   position: relative;
   color: #fff;
   background-color: #2ECC71;
-  border-color: #2EA26C;
+  border-color: #35b378;
 }
 #list .list-item.edit #edit-form {
   display: flex;
