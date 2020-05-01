@@ -25,13 +25,25 @@ function addItem(desc) {
         <img src="img/edit-icon.png" alt="icon">
       </div>
     </div>
-    <div class="deleteButton">
-      <img src="img/delete-icon.png" alt="icon"/>
+    <div class="buttons-holder">
+      <div class="completeButton">
+        <img src="https://img.icons8.com/color/30/000000/checkmark.png" alt="icon"/>
+      </div>
+      <div class="deleteButton">
+        <img src="img/delete-icon.png" alt="icon"/>
+      </div>
     </div>
   </div>
   `;
 
   $("#list").prepend(item);
+}
+
+function editItem(item, desc) {
+  item.prepend(`
+    <span class="desc">${desc}</span>
+  `);
+  item.find(".desc").text(desc);
 }
 
 function removeItem(item) {
@@ -60,7 +72,31 @@ $(document).ready(function(){
   })
 
   $("#list").on("click", ".deleteButton", function(){
-    removeItem($(this).parent());
+    removeItem($(this).parent().parent());
     updateInfo();
+  });
+
+  $("#list").on("click", ".completeButton", function(){
+    $(this).parent().parent().toggleClass("completed");
+    updateInfo();
+  });
+
+  $("#list").on("click", ".editButton", function(){
+    $(this).parent().parent().addClass("edit");
+
+    const item = $(this).parent().find("span").remove();
+
+    $(this).siblings("#edit-form").find("#editField").val(item.text());
+  });
+
+  $("#list").on("click", "#editButton", function(e){
+    e.preventDefault();
+
+    const desc = $(this).siblings("#editField").val();
+
+    if (desc) {
+      editItem($(this).parent().parent(), desc);
+      $(this).parent().parent().parent().removeClass("edit");
+    }
   });
 });

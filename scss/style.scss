@@ -115,6 +115,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eee;
+    transition: .1s;
 
     &:last-child {
       border-bottom: none;
@@ -126,8 +127,19 @@ body {
       background-color: #2ECC71;
     }
 
+    &.edit {
+      #edit-form {
+        display: inline-block;
+      }
+    }
+
     &.active {
       .deleteButton {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .completeButton {
         opacity: 1;
         visibility: visible;
       }
@@ -144,6 +156,34 @@ body {
       align-items: center;
     }
 
+    #edit-form {
+      display: none;
+
+      input {
+        padding: 5px;
+        background-color: #fcfcfc;
+        border: 1px solid #eee;
+        border-radius: 2px;
+      }
+
+      #editButton {
+        padding: 5px 10px;
+        color: #fff;
+        background-color: #2ECC71;
+        border-color: #00B16A;
+        transition: .1s;
+
+        &:hover {
+          background-color: #00B16A;
+          border-color: #2EA26C;
+        }
+      }
+    }
+
+    .buttons-holder {
+      display: flex;
+    }
+
     .editButton {
       opacity: 0;
       visibility: hidden;
@@ -153,6 +193,18 @@ body {
         margin-left: 15px;
         display: block;
         width: 25px;
+      }
+    }
+
+    .completeButton {
+      margin-right: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .1s;
+
+      img {
+        display: block;
+        width: 30px;
       }
     }
 
