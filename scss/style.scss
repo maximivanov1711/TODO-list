@@ -129,7 +129,12 @@ body {
 
     &.edit {
       #edit-form {
-        display: inline-block;
+        display: flex;
+      }
+
+      .editButton {
+        opacity: 0 !important;
+        visibility: hidden !important;
       }
     }
 
@@ -164,6 +169,11 @@ body {
         background-color: #fcfcfc;
         border: 1px solid #eee;
         border-radius: 2px;
+      }
+
+      #editField {
+        width: 100%;
+        margin-right: 10px;
       }
 
       #editButton {

@@ -113,7 +113,11 @@ body {
   background-color: #2ECC71;
 }
 #list .list-item.edit #edit-form {
-  display: inline-block;
+  display: flex;
+}
+#list .list-item.edit .editButton {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 #list .list-item.active .deleteButton {
   opacity: 1;
@@ -140,6 +144,10 @@ body {
   background-color: #fcfcfc;
   border: 1px solid #eee;
   border-radius: 2px;
+}
+#list .list-item #edit-form #editField {
+  width: 100%;
+  margin-right: 10px;
 }
 #list .list-item #edit-form #editButton {
   padding: 5px 10px;
