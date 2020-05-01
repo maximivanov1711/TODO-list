@@ -116,18 +116,23 @@ body {
     margin-bottom: 0px;
     padding: 15px;
     border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
     transition: 0.1s;
 
-    &:first-child, &:last-child {
-      border: none;
+    &:last-child {
+      border-bottom: none;
     }
 
     &.completed {
+      margin-top: -1px;
       position: relative;
       color: #fff;
       background-color: #2ecc71;
-      border-color: #35b378;
+      border-top: 1px solid #35b378;
+      border-bottom: 1px solid #35b378;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
 
     &.edit {

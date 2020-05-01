@@ -103,17 +103,21 @@ body {
   margin-bottom: 0px;
   padding: 15px;
   border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
   transition: 0.1s;
 }
-#list .list-item:first-child, #list .list-item:last-child {
-  border: none;
+#list .list-item:last-child {
+  border-bottom: none;
 }
 #list .list-item.completed {
+  margin-top: -1px;
   position: relative;
   color: #fff;
   background-color: #2ecc71;
-  border-color: #35b378;
+  border-top: 1px solid #35b378;
+  border-bottom: 1px solid #35b378;
+}
+#list .list-item.completed:last-child {
+  border-bottom: none;
 }
 #list .list-item.edit #edit-form {
   display: flex;
@@ -154,7 +158,7 @@ body {
   color: #fff;
   border-color: #00b16a;
   background-color: #2ecc71;
-  transition: 0.1s;
+  transition: opacity 0.1s;
 }
 #list .list-item #edit-form #editButton:hover {
   background-color: #00b16a;
