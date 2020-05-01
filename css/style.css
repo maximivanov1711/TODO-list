@@ -138,6 +138,11 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+#list .list-item .desc {
+  margin: 0;
+  display: inline-block;
+  max-width: 300px;
+}
 #list .list-item #edit-form {
   display: none;
 }

@@ -20,7 +20,7 @@ function addItem(desc) {
   const item = `
   <div class="list-item">
     <div class="desc-holder">
-      <span class="desc">${desc}</span>
+      <p class="desc">${desc}</p>
       <form action="#" id="edit-form">
         <input type="text" name="editField" id="editField">
         <input type="submit" value="edit" id="editButton">
@@ -45,7 +45,7 @@ function addItem(desc) {
 
 function editItem(item, desc) {
   item.prepend(`
-    <span class="desc">${desc}</span>
+    <p class="desc">${desc}</p>
   `);
   item.find(".desc").text(desc);
 }
@@ -88,7 +88,7 @@ $(document).ready(function(){
   $("#list").on("click", ".editButton", function(){
     $(this).parent().parent().addClass("edit");
 
-    const item = $(this).parent().find("span").remove();
+    const item = $(this).parent().find("p").remove();
 
     $(this).siblings("#edit-form").find("#editField").val(item.text());
   });

@@ -163,6 +163,12 @@ body {
       align-items: center;
     }
 
+    .desc {
+      margin: 0;
+      display: inline-block;
+      max-width: 300px;
+    }
+
     #edit-form {
       display: none;
 
